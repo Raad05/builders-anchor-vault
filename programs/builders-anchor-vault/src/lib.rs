@@ -17,7 +17,8 @@ pub mod builders_anchor_vault {
 
     // initialize the vault account
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        initialize::handler(ctx)
+        ctx.accounts.initialize(&ctx.bumps);
+        Ok(())
     }
 
     // deposit funds
