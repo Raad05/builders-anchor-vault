@@ -1,0 +1,21 @@
+pub mod constants;
+pub mod error;
+pub mod instructions;
+pub mod state;
+
+use anchor_lang::prelude::*;
+
+pub use constants::*;
+pub use instructions::*;
+pub use state::*;
+
+declare_id!("BU2EcRFU3RKpSCAFVGcBjmBUcQnrRjsHKnr97dMu9oYJ");
+
+#[program]
+pub mod builders_anchor_vault {
+    use super::*;
+
+    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+        initialize::handler(ctx)
+    }
+}
