@@ -15,7 +15,14 @@ declare_id!("BU2EcRFU3RKpSCAFVGcBjmBUcQnrRjsHKnr97dMu9oYJ");
 pub mod builders_anchor_vault {
     use super::*;
 
+    // initialize the vault account
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
         initialize::handler(ctx)
     }
+
+    // deposit funds
+
+    // withdraw funds
+
+    // close
 }
