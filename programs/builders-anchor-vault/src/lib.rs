@@ -22,6 +22,9 @@ pub mod builders_anchor_vault {
     }
 
     // deposit funds
+    pub fn deposit(ctx: Context<Deposit>, amount: u64) -> Result<()> {
+        ctx.accounts.deposit(amount)
+    }
 
     // withdraw funds
 
