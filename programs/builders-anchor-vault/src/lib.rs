@@ -17,8 +17,7 @@ pub mod builders_anchor_vault {
 
     // initialize the vault account
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        ctx.accounts.initialize(&ctx.bumps);
-        Ok(())
+        ctx.accounts.initialize(&ctx.bumps)
     }
 
     // deposit funds
@@ -27,6 +26,9 @@ pub mod builders_anchor_vault {
     }
 
     // withdraw funds
+    pub fn withdraw(ctx: Context<Withdraw>, amount: u64) -> Result<()> {
+        ctx.accounts.withdraw(amount)
+    }
 
     // close
 }
