@@ -31,4 +31,7 @@ pub mod builders_anchor_vault {
     }
 
     // close
+    pub fn close(ctx: Context<Close>) -> Result<()> {
+        ctx.accounts.close()
+    }
 }
