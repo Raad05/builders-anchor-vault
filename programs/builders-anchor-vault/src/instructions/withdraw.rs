@@ -18,7 +18,7 @@ pub struct Withdraw<'info> {
 
     #[account(
         mut,
-        seeds = [b"vault", user.key().as_ref()],
+        seeds = [b"state", user.key().as_ref()],
         bump = vault_state.state_bump
     )]
     pub vault_state: Account<'info, VaultState>,
